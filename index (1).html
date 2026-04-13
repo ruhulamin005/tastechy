@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tastechy — Digital Agency Hobart | Web Development Tasmania</title>
+  <meta name="description" content="Tastechy is Hobart's leading digital agency offering web development, mobile & web app development, and API solutions for Tasmanian businesses. From startups to enterprise." />
+  <meta name="keywords" content="digital agency Hobart, web development Tasmania, app development Hobart, Tasmanian web solutions, API development Tasmania, one-page website Hobart" />
+  <meta name="author" content="Tastechy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tastechy.com.au" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tastechy — Digital Agency Hobart, Tasmania" />
+  <meta property="og:description" content="Building websites, apps, and APIs that help Tasmanian businesses thrive in the digital age." />
+  <meta property="og:url" content="https://tastechy.com.au" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:site_name" content="Tastechy" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tastechy — Digital Agency Hobart" />
+  <meta name="twitter:description" content="Web development, mobile apps & API solutions for Tasmanian businesses." />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tastechy",
+    "description": "Hobart-based digital agency specialising in web development, mobile & web applications, and API development for Tasmanian businesses.",
+    "url": "https://tastechy.com.au",
+    "email": "info@tastechy.com.au",
+    "telephone": "+61450060350",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hobart",
+      "addressRegion": "TAS",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -42.8821,
+      "longitude": 147.3272
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Tasmania"
+    },
+    "sameAs": [],
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "serviceType": ["Web Development", "Mobile App Development", "API Development"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --deep: #0a1628;
+      --ocean: #1b4965;
+      --teal: #1a7a6d;
+      --forest: #1a5e3a;
+      --sage: #a3b18a;
+      --sand: #f5f0e8;
+      --cream: #faf8f4;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #5a6478;
+      --accent: #d4a03c;
+      --coral: #e07a5f;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; }
+
+    /* ── Animations ── */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+
+    /* ── Navigation ── */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; }
+    .nav.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); padding: 0.75rem 2rem; }
+    .logo { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--deep); text-decoration: none; letter-spacing: -0.5px; }
+    .logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; position: relative; cursor: pointer; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--deep) !important; color: var(--white) !important; padding: 0.6rem 1.5rem !important; border-radius: 6px; font-size: 0.8rem !important; transition: background 0.3s, transform 0.2s; }
+    .nav-cta:hover { background: var(--ocean) !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--deep); display: block; transition: all 0.3s; }
+
+    /* Mobile menu */
+    .mobile-menu { position: fixed; inset: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--deep); text-decoration: none; cursor: pointer; }
+    .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 2.5rem; cursor: pointer; color: var(--deep); line-height: 1; }
+
+    /* ── Hero ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 8rem 2rem 4rem; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, var(--cream) 0%, #e8f0e8 30%, #dde8ef 60%, var(--cream) 100%); }
+    .hero-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(circle at 1px 1px, var(--deep) 1px, transparent 0); background-size: 40px 40px; }
+    .hero-accent { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; }
+    .hero-accent-1 { width: 600px; height: 600px; top: -200px; right: -100px; background: var(--teal); }
+    .hero-accent-2 { width: 600px; height: 600px; bottom: -200px; left: -200px; background: var(--ocean); }
+    .hero-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; width: 100%; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(26,122,109,0.08); border: 1px solid rgba(26,122,109,0.15); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+    .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 5.5vw, 4.2rem); line-height: 1.1; color: var(--deep); margin-bottom: 1.5rem; letter-spacing: -1px; }
+    .hero h1 em { font-style: italic; color: var(--teal); }
+    .hero-sub { font-size: 1.1rem; line-height: 1.7; color: var(--text-light); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--deep); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-family: inherit; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; }
+    .btn-primary:hover { background: var(--ocean); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,73,101,0.2); }
+    .btn-secondary { background: transparent; color: var(--deep); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; border: 2px solid var(--deep); cursor: pointer; font-family: inherit; transition: all 0.3s; }
+    .btn-secondary:hover { background: var(--deep); color: var(--white); }
+    .hero-card { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.06); position: relative; }
+    .hero-card-badge { position: absolute; top: -12px; right: 20px; background: var(--accent); color: var(--white); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .hero-stat { text-align: center; padding: 1.25rem; border-radius: 12px; background: var(--cream); }
+    .hero-stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--teal); }
+    .hero-stat-label { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; font-weight: 500; }
+    .hero-trust { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06); }
+    .hero-trust-text { font-size: 0.78rem; color: var(--text-light); line-height: 1.4; }
+
+    /* ── Sections Common ── */
+    .section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 1rem; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--deep); margin-bottom: 1rem; line-height: 1.15; letter-spacing: -0.5px; }
+    .section-desc { font-size: 1.05rem; color: var(--text-light); max-width: 600px; line-height: 1.7; font-weight: 300; }
+
+    /* ── Services ── */
+    .services-bg { background: var(--deep); }
+    .services-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .service-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem 2rem; transition: all 0.4s; position: relative; overflow: hidden; }
+    .service-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(26,122,109,0.3); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; color: var(--teal); margin-bottom: 1.5rem; display: block; }
+    .service-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--white); margin-bottom: 0.75rem; }
+    .service-card p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; font-weight: 300; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .service-tag { background: rgba(26,122,109,0.15); color: var(--teal); padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 500; }
+
+    /* ── Vision ── */
+    .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+    .vision-text p { color: var(--text-light); line-height: 1.8; margin-bottom: 1.25rem; font-weight: 300; }
+    .vision-highlights { display: grid; gap: 1rem; }
+    .vision-card { background: var(--white); border-radius: 14px; padding: 1.75rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border-left: 3px solid var(--teal); }
+    .vision-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--deep); margin-bottom: 0.35rem; }
+    .vision-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; font-weight: 300; }
+
+    /* ── Testimonials ── */
+    .testimonials-bg { background: linear-gradient(180deg, var(--cream) 0%, var(--sand) 100%); }
+    .testimonials-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+    .testimonial-box { max-width: 680px; margin: 3rem auto 0; position: relative; min-height: 200px; }
+    .testimonial-item { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+    .testimonial-item.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .testimonial-quote { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--deep); line-height: 1.5; font-style: italic; margin-bottom: 1.5rem; }
+    .testimonial-quote::before { content: '\201C'; color: var(--teal); font-size: 3rem; line-height: 0; vertical-align: -0.5rem; margin-right: 0.25rem; }
+    .testimonial-author { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .testimonial-location { font-size: 0.78rem; color: var(--text-light); }
+    .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
+    .testimonial-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.12); border: none; cursor: pointer; transition: all 0.3s; padding: 0; }
+    .testimonial-dot.active { background: var(--teal); width: 24px; border-radius: 4px; }
+
+    /* ── Team ── */
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .team-card { background: var(--white); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: all 0.3s; }
+    .team-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .team-avatar { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); }
+    .team-name { font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 0.25rem; }
+    .team-role { font-size: 0.8rem; color: var(--text-light); }
+    .team-badge { display: inline-block; background: rgba(26,122,109,0.1); color: var(--teal); padding: 0.2rem 0.6rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── Careers ── */
+    .careers-bg { background: var(--deep); }
+    .careers-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .careers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+    .careers-values { display: grid; gap: 1.25rem; }
+    .career-value { display: flex; gap: 1rem; align-items: flex-start; }
+    .career-value-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(26,122,109,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .career-value h4 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .career-value p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .careers-cta-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .careers-cta-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--white); margin-bottom: 1rem; }
+    .careers-cta-box p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 2rem; }
+
+    /* ── Contact ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; margin-top: 3rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(26,122,109,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--deep); margin-bottom: 0.15rem; }
+    .contact-item p { font-size: 0.85rem; color: var(--text-light); }
+    .contact-item a { color: var(--teal); text-decoration: none; font-size: 0.85rem; }
+    .contact-form { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.85rem 1rem; border: 1.5px solid rgba(0,0,0,0.08); border-radius: 10px; font-size: 0.9rem; font-family: inherit; background: var(--cream); transition: all 0.3s; outline: none; color: var(--text); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(26,122,109,0.08); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .honey { position: absolute; left: -9999px; }
+    .form-msg { padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1rem; display: none; }
+    .form-msg.show { display: block; }
+    .form-msg.success { background: rgba(26,122,109,0.08); color: var(--teal); }
+    .form-msg.error { background: rgba(224,122,95,0.08); color: var(--coral); }
+
+    /* ── Footer ── */
+    .footer { background: var(--deep); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-logo span { color: var(--teal); }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 280px; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+    .footer-col a, .footer-col p { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--teal); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .footer-social { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: all 0.3s; }
+    .footer-social:hover { background: var(--teal); color: var(--white); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .vision-grid, .careers-grid, .contact-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none !important; }
+      .hamburger { display: flex !important; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero { padding: 7rem 1.25rem 3rem; }
+      .section { padding: 4rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="navbar">
+    <a class="logo" href="#home">taste<span>chy</span></a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#vision">Our Vision</a>
+      <a href="#team">Team</a>
+      <a href="#careers">Careers</a>
+      <a class="nav-cta" href="#contact">Get in Touch</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&times;</button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#vision" class="mobile-link">Our Vision</a>
+    <a href="#team" class="mobile-link">Team</a>
+    <a href="#careers" class="mobile-link">Careers</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-accent hero-accent-1"></div>
+    <div class="hero-accent hero-accent-2"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-tag"><span class="hero-tag-dot"></span> Hobart's Digital Partner</div>
+        <h1>We build digital<br>experiences that<br><em>grow Tasmania</em></h1>
+        <p class="hero-sub">From one-page websites to enterprise applications and complex API integrations — Tastechy delivers technology solutions tailored for Tasmanian businesses.</p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="#contact">Start Your Project &rarr;</a>
+          <a class="btn-secondary" href="#services">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-badge">Est. 2024</div>
+          <div class="hero-card-grid">
+            <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">Projects Delivered</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client Satisfaction</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Support Available</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">4+</div><div class="hero-stat-label">Expert Team</div></div>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-text">Trusted by Tasmanian businesses — from local startups to established enterprises across the island.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ── -->
+  <section class="services-bg" id="services">
+    <div class="services-section">
+      <div class="reveal">
+        <div class="section-tag" style="color: var(--sage);">What We Do</div>
+        <div class="section-title" style="color: var(--white);">Digital solutions built<br>for real impact</div>
+        <p class="section-desc" style="color: rgba(255,255,255,0.5);">We specialise in crafting digital products that help Tasmanian businesses compete, grow, and thrive in the modern economy.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-d1">
+          <span class="service-icon">&#9672;</span>
+          <h3>One-Page Websites</h3>
+          <p>High-converting, blazing-fast single-page sites that capture your brand essence and drive results for Tasmanian businesses.</p>
+          <div class="service-tags">
+            <span class="service-tag">Landing Pages</span>
+            <span class="service-tag">Portfolio Sites</span>
+            <span class="service-tag">Business Profiles</span>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-d2">
+          <span class="service-icon">&#11041;</span>
+          <h3>Mobile &amp; Web Apps</h3>
+          <p>Custom applications built with modern tech stacks — from MVPs for startups to enterprise-grade platforms.</p>
+          <div class="service-tags">
+            <span class="service-tag">iOS &amp; Android</span>
+            <span class="service-tag">Progressive Web Apps</span>
+            <span class="service-tag">SaaS Platforms</span>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-d3">
+          <span class="service-icon">&#9671;</span>
+          <h3>API Development</h3>
+          <p>Robust, scalable API architectures — RESTful and GraphQL — powering seamless integrations and data flows.</p>
+          <div class="service-tags">
+            <span class="service-tag">REST &amp; GraphQL</span>
+            <span class="service-tag">Third-party Integrations</span>
+            <span class="service-tag">Microservices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Vision ── -->
+  <section class="section" id="vision">
+    <div class="reveal">
+      <div class="section-tag">Our Vision</div>
+      <div class="section-title">Empowering Tasmania's<br>digital future</div>
+    </div>
+    <div class="vision-grid">
+      <div class="vision-text reveal">
+        <p>As a Hobart-based digital agency, Tastechy is committed to bridging the digital gap for Tasmanian businesses. We understand the unique challenges and opportunities of the regional market — and we build solutions that work here.</p>
+        <p>Our team combines local expertise with global-standard technology practices. Whether you're a small business in Battery Point needing a web presence, or an enterprise in the Hobart CBD requiring complex API integrations, we deliver with the same dedication to quality.</p>
+        <p>We believe Tasmania deserves world-class digital services without the mainland price tag. That's why we've built our agency right here — to serve the community we're a part of.</p>
+      </div>
+      <div class="vision-highlights reveal reveal-d2">
+        <div class="vision-card">
+          <h4>Local-First Approach</h4>
+          <p>Deep understanding of Tasmania's business landscape, from tourism to agriculture and beyond.</p>
+        </div>
+        <div class="vision-card">
+          <h4>Enterprise-Ready Technology</h4>
+          <p>Modern tech stacks, scalable architectures, and security-first development practices.</p>
+        </div>
+        <div class="vision-card">
+          <h4>Ongoing Partnership</h4>
+          <p>We don't disappear after launch. Continuous support, updates, and optimisation for your digital assets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ── -->
+  <section class="testimonials-bg">
+    <div class="testimonials-section">
+      <div class="reveal">
+        <div class="section-tag">Testimonials</div>
+        <div class="section-title">What our clients say</div>
+      </div>
+      <div class="testimonial-box">
+        <div class="testimonial-item active" data-index="0">
+          <p class="testimonial-quote">Tastechy transformed our online presence. Our bookings increased 300% within the first quarter.</p>
+          <p class="testimonial-author">Local Hospitality Business</p>
+          <p class="testimonial-location">Hobart, Tasmania</p>
+        </div>
+        <div class="testimonial-item" data-index="1">
+          <p class="testimonial-quote">Professional, responsive, and they truly understand the Tasmanian market. Highly recommended.</p>
+          <p class="testimonial-author">Regional Retail Brand</p>
+          <p class="testimonial-location">Launceston, Tasmania</p>
+        </div>
+        <div class="testimonial-item" data-index="2">
+          <p class="testimonial-quote">The API integration they built streamlined our entire operation. Exceptional technical expertise.</p>
+          <p class="testimonial-author">Agriculture Tech Startup</p>
+          <p class="testimonial-location">Tasmania</p>
+        </div>
+      </div>
+      <div class="testimonial-dots">
+        <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+        <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+        <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Team ── -->
+  <section class="section" id="team">
+    <div class="reveal">
+      <div class="section-tag">Our Team</div>
+      <div class="section-title">The people behind<br>every pixel</div>
+      <p class="section-desc">A distributed team of specialists united by a passion for building exceptional digital experiences.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal reveal-d1">
+        <div class="team-avatar" style="background: #1a5e3a;">TR</div>
+        <div class="team-name">Toyobur Rahman</div>
+        <div class="team-role">Director &amp; CEO</div>
+      </div>
+      <div class="team-card reveal reveal-d1">
+        <div class="team-avatar" style="background: #1b4965;">RA</div>
+        <div class="team-name">Md Ruhul Amin</div>
+        <div class="team-role">Software Developer</div>
+      </div>
+      <div class="team-card reveal reveal-d2">
+        <div class="team-avatar" style="background: #2d6a4f;">MF</div>
+        <div class="team-name">Mohsin Firoz</div>
+        <div class="team-role">CTO</div>
+        <div class="team-badge">Remote</div>
+      </div>
+      <div class="team-card reveal reveal-d3">
+        <div class="team-avatar" style="background: #1b4965;">MJ</div>
+        <div class="team-name">Maksund Jamil</div>
+        <div class="team-role">Business Analyst</div>
+        <div class="team-badge">Remote</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Careers ── -->
+  <section class="careers-bg" id="careers">
+    <div class="careers-section">
+      <div class="reveal">
+        <div class="section-tag" style="color: var(--sage);">Career Guide</div>
+        <div class="section-title" style="color: var(--white);">Build your career<br>with Tastechy</div>
+      </div>
+      <div class="careers-grid">
+        <div class="careers-values reveal">
+          <div class="career-value">
+            <div class="career-value-icon">&#127793;</div>
+            <div><h4>Growth Mindset</h4><p>We invest in your development — conferences, courses, and mentorship.</p></div>
+          </div>
+          <div class="career-value">
+            <div class="career-value-icon">&#127758;</div>
+            <div><h4>Remote-Friendly</h4><p>Work from Tasmania or anywhere. We value output over office hours.</p></div>
+          </div>
+          <div class="career-value">
+            <div class="career-value-icon">&#129309;</div>
+            <div><h4>Collaborative Culture</h4><p>Small team, big impact. Every voice matters in our decision-making.</p></div>
+          </div>
+          <div class="career-value">
+            <div class="career-value-icon">&#9889;</div>
+            <div><h4>Modern Stack</h4><p>Work with cutting-edge tech: Next.js, TypeScript, cloud-native architectures.</p></div>
+          </div>
+        </div>
+        <div class="careers-cta-box reveal reveal-d2">
+          <h3>Interested in joining us?</h3>
+          <p>We're always looking for talented developers, designers, and digital strategists who share our passion for building great things. Even if we don't have an open role listed, we'd love to hear from you.</p>
+          <a class="btn-primary" href="#contact">Send us your CV &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section class="section" id="contact">
+    <div class="reveal">
+      <div class="section-tag">Contact</div>
+      <div class="section-title">Let's build something<br>great together</div>
+      <p class="section-desc">Ready to take your business digital? Get in touch and we'll discuss how we can help.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">&#9993;</div>
+          <div><h4>Email</h4><a href="mailto:info@tastechy.com.au">info@tastechy.com.au</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128241;</div>
+          <div><h4>Phone</h4><a href="tel:+61450060350">0450 060 350</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128205;</div>
+          <div><h4>Location</h4><p>Hobart, Tasmania, Australia</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#127760;</div>
+          <div><h4>Website</h4><a href="https://tastechy.com.au" target="_blank" rel="noopener noreferrer">tastechy.com.au</a></div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-d2">
+        <div class="form-msg" id="formMsg"></div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="04XX XXX XXX" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <!-- Honeypot -->
+        <input type="text" class="honey" id="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn-primary" id="submitBtn" style="width:100%;">Send Message &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">taste<span>chy</span></div>
+          <p>Hobart's home-grown digital agency. Building websites, apps, and APIs that help Tasmanian businesses thrive in the digital age.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#vision">Our Vision</a>
+          <a href="#team">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p>One-Page Websites</p>
+          <p>Mobile &amp; Web Apps</p>
+          <p>API Development</p>
+          <p>Digital Strategy</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@tastechy.com.au">info@tastechy.com.au</a>
+          <a href="tel:+61450060350">0450 060 350</a>
+          <p>Hobart, TAS, Australia</p>
+          <p>ABN: XX XXX XXX XXX</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Tastechy. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+          <a class="footer-social" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+          <a class="footer-social" href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Scroll-based nav ──
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile menu ──
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // ── Scroll reveal ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── Testimonials carousel ──
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+      testimonialItems.forEach(item => item.classList.remove('active'));
+      testimonialDots.forEach(dot => dot.classList.remove('active'));
+      testimonialItems[index].classList.add('active');
+      testimonialDots[index].classList.add('active');
+      currentTestimonial = index;
+    }
+
+    testimonialDots.forEach(dot => {
+      dot.addEventListener('click', () => showTestimonial(parseInt(dot.dataset.index)));
+    });
+
+    setInterval(() => {
+      showTestimonial((currentTestimonial + 1) % testimonialItems.length);
+    }, 5000);
+
+    // ── Contact form ──
+    const submitBtn = document.getElementById('submitBtn');
+    const formMsg = document.getElementById('formMsg');
+
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const honey = document.getElementById('honey').value;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      formMsg.classList.remove('show', 'success', 'error');
+
+      if (honey) return; // bot detected
+
+      if (!name || !email || !message) {
+        formMsg.textContent = 'Please fill in all required fields.';
+        formMsg.classList.add('show', 'error');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formMsg.textContent = 'Please enter a valid email address.';
+        formMsg.classList.add('show', 'error');
+        return;
+      }
+
+      // Success — in production, POST to your API endpoint here
+      formMsg.textContent = "Thank you! We'll get back to you within 24 hours.";
+      formMsg.classList.add('show', 'success');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('message').value = '';
+    });
+  </script>
+</body>
+</html>
