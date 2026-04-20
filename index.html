@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tastechy — Digital Agency Hobart | Web Development Tasmania</title>
-  <meta name="description" content="Tastechy is Hobart's leading digital agency offering web development, mobile & web app development, and API solutions for Tasmanian businesses. From startups to enterprise." />
-  <meta name="keywords" content="digital agency Hobart, web development Tasmania, app development Hobart, Tasmanian web solutions, API development Tasmania, one-page website Hobart" />
+  <title>Tastechy — Web Design & Digital Marketing Hobart | Tasmania's Digital Agency</title>
+  <meta name="description" content="Tastechy is Hobart's trusted digital agency for small and medium businesses. Websites from $1,200, SEO, digital marketing, apps & online stores. Free consultation for Tasmanian businesses." />
+  <meta name="keywords" content="web design Hobart, digital marketing Tasmania, SEO Hobart, website design Tasmania, small business website Hobart, digital agency Hobart, online store Tasmania" />
   <meta name="author" content="Tastechy" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://tastechy.com.au" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Tastechy — Digital Agency Hobart, Tasmania" />
-  <meta property="og:description" content="Building websites, apps, and APIs that help Tasmanian businesses thrive in the digital age." />
+  <meta property="og:title" content="Tastechy — Web Design & Digital Marketing Hobart, Tasmania" />
+  <meta property="og:description" content="Websites, online stores, apps & digital marketing for Tasmanian small businesses. Free 30-min strategy call." />
   <meta property="og:url" content="https://tastechy.com.au" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_AU" />
@@ -21,7 +21,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tastechy — Digital Agency Hobart" />
-  <meta name="twitter:description" content="Web development, mobile apps & API solutions for Tasmanian businesses." />
+  <meta name="twitter:description" content="Websites, digital marketing & apps for Tasmanian businesses. Free consultation." />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Tastechy",
-    "description": "Hobart-based digital agency specialising in web development, mobile & web applications, and API development for Tasmanian businesses.",
+    "description": "Hobart-based digital agency specialising in web design, digital marketing, e-commerce and app development for Tasmanian small and medium businesses.",
     "url": "https://tastechy.com.au",
     "email": "info@tastechy.com.au",
     "telephone": "+61450060350",
@@ -37,6 +37,7 @@
       "@type": "PostalAddress",
       "addressLocality": "Hobart",
       "addressRegion": "TAS",
+      "postalCode": "7000",
       "addressCountry": "AU"
     },
     "geo": {
@@ -44,14 +45,10 @@
       "latitude": -42.8821,
       "longitude": 147.3272
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Tasmania"
-    },
-    "sameAs": [],
+    "areaServed": { "@type": "State", "name": "Tasmania" },
     "priceRange": "$$",
     "openingHours": "Mo-Fr 09:00-17:00",
-    "serviceType": ["Web Development", "Mobile App Development", "API Development"]
+    "serviceType": ["Web Design", "Digital Marketing", "SEO", "E-commerce", "App Development", "API Development"]
   }
   </script>
 
@@ -62,156 +59,246 @@
 
   <style>
     :root {
-      --deep: #0a1628;
-      --ocean: #1b4965;
-      --teal: #1a7a6d;
-      --forest: #1a5e3a;
-      --sage: #a3b18a;
-      --sand: #f5f0e8;
-      --cream: #faf8f4;
-      --white: #ffffff;
-      --text: #1a1a2e;
+      --deep:       #0a1628;
+      --ocean:      #1b4965;
+      --teal:       #1a7a6d;
+      --teal-light: #22a08a;
+      --forest:     #1a5e3a;
+      --sage:       #a3b18a;
+      --sand:       #f5f0e8;
+      --cream:      #faf8f4;
+      --white:      #ffffff;
+      --text:       #1a1a2e;
       --text-light: #5a6478;
-      --accent: #d4a03c;
-      --coral: #e07a5f;
+      --accent:     #d4a03c;
+      --coral:      #e07a5f;
+      --border:     rgba(0,0,0,0.07);
     }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; }
 
     /* ── Animations ── */
-    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-d1 { transition-delay: 0.1s; }
     .reveal-d2 { transition-delay: 0.2s; }
     .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
 
     /* ── Navigation ── */
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; }
-    .nav.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); padding: 0.75rem 2rem; }
+    .nav.scrolled { background: rgba(255,255,255,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,0.06); padding: 0.75rem 2rem; }
     .logo { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--deep); text-decoration: none; letter-spacing: -0.5px; }
     .logo span { color: var(--teal); }
-    .nav-links { display: flex; gap: 2.5rem; align-items: center; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; position: relative; cursor: pointer; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; position: relative; cursor: pointer; }
     .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s ease; }
     .nav-links a:hover::after { width: 100%; }
-    .nav-cta { background: var(--deep) !important; color: var(--white) !important; padding: 0.6rem 1.5rem !important; border-radius: 6px; font-size: 0.8rem !important; transition: background 0.3s, transform 0.2s; }
-    .nav-cta:hover { background: var(--ocean) !important; transform: translateY(-1px); }
+    .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.6rem 1.4rem !important; border-radius: 6px; font-size: 0.8rem !important; transition: background 0.3s, transform 0.2s !important; }
+    .nav-cta:hover { background: var(--teal-light) !important; transform: translateY(-1px) !important; }
     .nav-cta::after { display: none !important; }
     .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
     .hamburger span { width: 24px; height: 2px; background: var(--deep); display: block; transition: all 0.3s; }
 
     /* Mobile menu */
-    .mobile-menu { position: fixed; inset: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mobile-menu { position: fixed; inset: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 1.75rem; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--deep); text-decoration: none; cursor: pointer; }
+    .mobile-menu a { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--deep); text-decoration: none; cursor: pointer; }
+    .mobile-menu .mobile-cta { background: var(--teal); color: var(--white) !important; padding: 0.75rem 2.5rem; border-radius: 8px; font-size: 1.1rem !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 600; }
     .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 2.5rem; cursor: pointer; color: var(--deep); line-height: 1; }
 
+    /* ── WhatsApp Float ── */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 90; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+    .whatsapp-tooltip { position: absolute; right: 68px; background: var(--deep); color: white; font-size: 0.75rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
     /* ── Hero ── */
-    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 8rem 2rem 4rem; }
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 8rem 2rem 5rem; }
     .hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, var(--cream) 0%, #e8f0e8 30%, #dde8ef 60%, var(--cream) 100%); }
     .hero-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(circle at 1px 1px, var(--deep) 1px, transparent 0); background-size: 40px 40px; }
     .hero-accent { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; }
     .hero-accent-1 { width: 600px; height: 600px; top: -200px; right: -100px; background: var(--teal); }
     .hero-accent-2 { width: 600px; height: 600px; bottom: -200px; left: -200px; background: var(--ocean); }
     .hero-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; width: 100%; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(26,122,109,0.08); border: 1px solid rgba(26,122,109,0.15); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(26,122,109,0.08); border: 1px solid rgba(26,122,109,0.18); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
     .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: pulse 2s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 5.5vw, 4.2rem); line-height: 1.1; color: var(--deep); margin-bottom: 1.5rem; letter-spacing: -1px; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.1; color: var(--deep); margin-bottom: 1.5rem; letter-spacing: -1px; }
     .hero h1 em { font-style: italic; color: var(--teal); }
-    .hero-sub { font-size: 1.1rem; line-height: 1.7; color: var(--text-light); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; }
+    .hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--text-light); max-width: 520px; margin-bottom: 0.75rem; font-weight: 300; }
+    .hero-free { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 2rem; }
+    .hero-free::before { content: '✓'; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary { background: var(--deep); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-family: inherit; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; }
-    .btn-primary:hover { background: var(--ocean); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,73,101,0.2); }
+    .btn-primary { background: var(--teal); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-family: inherit; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; }
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,122,109,0.25); }
     .btn-secondary { background: transparent; color: var(--deep); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; border: 2px solid var(--deep); cursor: pointer; font-family: inherit; transition: all 0.3s; }
     .btn-secondary:hover { background: var(--deep); color: var(--white); }
-    .hero-card { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.06); position: relative; }
+    .hero-card { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.07); position: relative; }
     .hero-card-badge { position: absolute; top: -12px; right: 20px; background: var(--accent); color: var(--white); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
     .hero-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     .hero-stat { text-align: center; padding: 1.25rem; border-radius: 12px; background: var(--cream); }
     .hero-stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--teal); }
     .hero-stat-label { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; font-weight: 500; }
     .hero-trust { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06); }
+    .hero-trust-stars { color: var(--accent); font-size: 0.9rem; letter-spacing: 2px; }
     .hero-trust-text { font-size: 0.78rem; color: var(--text-light); line-height: 1.4; }
+
+    /* ── Industries Strip ── */
+    .industries-strip { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem; }
+    .industries-inner { max-width: 1200px; margin: 0 auto; }
+    .industries-label { text-align: center; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 2rem; }
+    .industries-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+    .industry-item { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; padding: 1.25rem 0.75rem; border-radius: 12px; border: 1.5px solid var(--border); background: var(--cream); transition: all 0.3s; cursor: default; }
+    .industry-item:hover { border-color: var(--teal); background: rgba(26,122,109,0.04); transform: translateY(-2px); }
+    .industry-icon { font-size: 1.75rem; }
+    .industry-name { font-size: 0.72rem; font-weight: 600; color: var(--text-light); text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
 
     /* ── Sections Common ── */
     .section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
     .section-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 1rem; }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--deep); margin-bottom: 1rem; line-height: 1.15; letter-spacing: -0.5px; }
-    .section-desc { font-size: 1.05rem; color: var(--text-light); max-width: 600px; line-height: 1.7; font-weight: 300; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.9rem, 3.8vw, 2.8rem); color: var(--deep); margin-bottom: 1rem; line-height: 1.15; letter-spacing: -0.5px; }
+    .section-desc { font-size: 1rem; color: var(--text-light); max-width: 600px; line-height: 1.75; font-weight: 300; }
 
     /* ── Services ── */
     .services-bg { background: var(--deep); }
     .services-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-    .service-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem 2rem; transition: all 0.4s; position: relative; overflow: hidden; }
-    .service-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(26,122,109,0.3); transform: translateY(-4px); }
-    .service-icon { font-size: 2rem; color: var(--teal); margin-bottom: 1.5rem; display: block; }
-    .service-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--white); margin-bottom: 0.75rem; }
-    .service-card p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; font-weight: 300; }
+    .service-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.25rem 2rem; transition: all 0.4s; }
+    .service-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(26,122,109,0.4); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 1.25rem; display: block; }
+    .service-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--white); margin-bottom: 0.6rem; }
+    .service-card p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.65; margin-bottom: 1.5rem; font-weight: 300; }
     .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .service-tag { background: rgba(26,122,109,0.15); color: var(--teal); padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 500; }
+    .service-tag { background: rgba(26,122,109,0.15); color: var(--sage); padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.68rem; font-weight: 500; }
+    .service-price { font-size: 0.78rem; color: var(--accent); font-weight: 600; margin-top: 1.25rem; display: block; }
 
-    /* ── Vision ── */
+    /* ── Process ── */
+    .process-bg { background: var(--white); }
+    .process-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .process-step { text-align: center; padding: 2rem 1.5rem; border-radius: 16px; background: var(--cream); border: 1.5px solid var(--border); transition: all 0.3s; }
+    .process-step:hover { border-color: var(--teal); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+    .process-num { width: 48px; height: 48px; border-radius: 50%; background: var(--teal); color: white; font-family: 'DM Serif Display', serif; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+    .process-step h4 { font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 0.5rem; }
+    .process-step p { font-size: 0.84rem; color: var(--text-light); line-height: 1.6; font-weight: 300; }
+
+    /* ── Portfolio ── */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .portfolio-card { border-radius: 16px; overflow: hidden; background: var(--white); border: 1.5px solid var(--border); transition: all 0.3s; }
+    .portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.08); border-color: var(--teal); }
+    .portfolio-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .portfolio-body { padding: 1.5rem; }
+    .portfolio-industry { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 0.4rem; }
+    .portfolio-body h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--deep); margin-bottom: 0.5rem; }
+    .portfolio-body p { font-size: 0.84rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; font-weight: 300; }
+    .portfolio-results { display: flex; gap: 1.25rem; }
+    .portfolio-result-num { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--teal); display: block; }
+    .portfolio-result-label { font-size: 0.68rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── Pricing ── */
+    .pricing-bg { background: var(--sand); }
+    .pricing-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: start; }
+    .pricing-card { background: var(--white); border-radius: 20px; padding: 2.5rem 2rem; border: 1.5px solid var(--border); transition: all 0.3s; position: relative; }
+    .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.07); }
+    .pricing-card.featured { border-color: var(--teal); box-shadow: 0 8px 32px rgba(26,122,109,0.12); }
+    .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--teal); color: white; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 0.35rem 1.25rem; border-radius: 100px; white-space: nowrap; }
+    .pricing-tier { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 0.75rem; }
+    .pricing-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--deep); margin-bottom: 0.5rem; }
+    .pricing-card .price { font-family: 'DM Serif Display', serif; font-size: 2.5rem; color: var(--deep); margin: 1rem 0 0.25rem; }
+    .pricing-card .price span { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--text-light); font-weight: 400; }
+    .pricing-card .price-note { font-size: 0.78rem; color: var(--text-light); margin-bottom: 1.75rem; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; color: var(--text-light); line-height: 1.4; }
+    .pricing-features li::before { content: '✓'; color: var(--teal); font-weight: 700; font-size: 0.85rem; margin-top: 0.05rem; flex-shrink: 0; }
+    .pricing-features li.no::before { content: '–'; color: rgba(0,0,0,0.15); }
+    .pricing-features li.no { color: rgba(90,100,120,0.35); }
+    .btn-outline { background: transparent; color: var(--teal); padding: 0.85rem 2rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; border: 2px solid var(--teal); cursor: pointer; font-family: inherit; transition: all 0.3s; display: block; text-align: center; width: 100%; }
+    .btn-outline:hover { background: var(--teal); color: var(--white); }
+    .btn-full { display: block; width: 100%; text-align: center; }
+    .pricing-note { text-align: center; margin-top: 2rem; font-size: 0.82rem; color: var(--text-light); }
+
+    /* ── Vision / About ── */
     .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
     .vision-text p { color: var(--text-light); line-height: 1.8; margin-bottom: 1.25rem; font-weight: 300; }
     .vision-highlights { display: grid; gap: 1rem; }
     .vision-card { background: var(--white); border-radius: 14px; padding: 1.75rem; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border-left: 3px solid var(--teal); }
     .vision-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--deep); margin-bottom: 0.35rem; }
-    .vision-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; font-weight: 300; }
+    .vision-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.55; font-weight: 300; }
 
     /* ── Testimonials ── */
     .testimonials-bg { background: linear-gradient(180deg, var(--cream) 0%, var(--sand) 100%); }
     .testimonials-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
-    .testimonial-box { max-width: 680px; margin: 3rem auto 0; position: relative; min-height: 200px; }
-    .testimonial-item { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
-    .testimonial-item.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .testimonial-quote { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--deep); line-height: 1.5; font-style: italic; margin-bottom: 1.5rem; }
-    .testimonial-quote::before { content: '\201C'; color: var(--teal); font-size: 3rem; line-height: 0; vertical-align: -0.5rem; margin-right: 0.25rem; }
-    .testimonial-author { font-size: 0.85rem; font-weight: 600; color: var(--text); }
-    .testimonial-location { font-size: 0.78rem; color: var(--text-light); }
-    .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
-    .testimonial-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.12); border: none; cursor: pointer; transition: all 0.3s; padding: 0; }
-    .testimonial-dot.active { background: var(--teal); width: 24px; border-radius: 4px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; text-align: left; }
+    .testimonial-card { background: var(--white); border-radius: 16px; padding: 2rem; border: 1.5px solid var(--border); transition: all 0.3s; }
+    .testimonial-card:hover { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+    .testimonial-stars { color: var(--accent); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .testimonial-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--deep); line-height: 1.55; font-style: italic; margin-bottom: 1.5rem; }
+    .testimonial-text::before { content: '\201C'; color: var(--teal); font-size: 1.8rem; line-height: 0; vertical-align: -0.4rem; margin-right: 0.15rem; }
+    .testimonial-author-wrap { display: flex; align-items: center; gap: 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 0.9rem; color: white; flex-shrink: 0; }
+    .testimonial-name { font-size: 0.875rem; font-weight: 700; color: var(--deep); }
+    .testimonial-biz { font-size: 0.78rem; color: var(--text-light); }
 
     /* ── Team ── */
     .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
-    .team-card { background: var(--white); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: all 0.3s; }
-    .team-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .team-card { background: var(--white); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: all 0.3s; border: 1.5px solid var(--border); }
+    .team-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.07); border-color: var(--teal); }
     .team-avatar { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); }
     .team-name { font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 0.25rem; }
     .team-role { font-size: 0.8rem; color: var(--text-light); }
     .team-badge { display: inline-block; background: rgba(26,122,109,0.1); color: var(--teal); padding: 0.2rem 0.6rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
+    /* ── FAQ ── */
+    .faq-bg { background: var(--white); }
+    .faq-section { padding: 6rem 2rem; max-width: 800px; margin: 0 auto; }
+    .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item { border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.3s; }
+    .faq-item.open { border-color: var(--teal); }
+    .faq-q { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.95rem; font-weight: 600; color: var(--deep); background: var(--cream); user-select: none; }
+    .faq-q:hover { background: rgba(26,122,109,0.04); }
+    .faq-icon { font-size: 1.4rem; color: var(--teal); flex-shrink: 0; transition: transform 0.3s; font-weight: 300; line-height: 1; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+    .faq-a p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+
     /* ── Careers ── */
     .careers-bg { background: var(--deep); }
-    .careers-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .careers-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
     .careers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
     .careers-values { display: grid; gap: 1.25rem; }
     .career-value { display: flex; gap: 1rem; align-items: flex-start; }
     .career-value-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(26,122,109,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
     .career-value h4 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
-    .career-value p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .career-value p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
     .careers-cta-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
     .careers-cta-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--white); margin-bottom: 1rem; }
-    .careers-cta-box p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 2rem; }
+    .careers-cta-box p { color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.6; margin-bottom: 2rem; }
 
     /* ── Contact ── */
     .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; margin-top: 3rem; }
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.75rem; }
     .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
     .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(26,122,109,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
     .contact-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--deep); margin-bottom: 0.15rem; }
     .contact-item p { font-size: 0.85rem; color: var(--text-light); }
     .contact-item a { color: var(--teal); text-decoration: none; font-size: 0.85rem; }
-    .contact-form { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
+    .contact-free-box { background: rgba(26,122,109,0.06); border: 1.5px solid rgba(26,122,109,0.15); border-radius: 14px; padding: 1.5rem; }
+    .contact-free-box h4 { font-size: 0.95rem; font-weight: 700; color: var(--deep); margin-bottom: 0.4rem; }
+    .contact-free-box p { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+    .contact-form { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
-    .form-group input, .form-group textarea { width: 100%; padding: 0.85rem 1rem; border: 1.5px solid rgba(0,0,0,0.08); border-radius: 10px; font-size: 0.9rem; font-family: inherit; background: var(--cream); transition: all 0.3s; outline: none; color: var(--text); }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(26,122,109,0.08); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.85rem 1rem; border: 1.5px solid rgba(0,0,0,0.08); border-radius: 10px; font-size: 0.875rem; font-family: inherit; background: var(--cream); transition: all 0.3s; outline: none; color: var(--text); appearance: none; -webkit-appearance: none; }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6478' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(26,122,109,0.08); background: white; }
+    .form-group textarea { resize: vertical; min-height: 110px; }
     .honey { position: absolute; left: -9999px; }
     .form-msg { padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1rem; display: none; }
     .form-msg.show { display: block; }
@@ -221,37 +308,49 @@
     /* ── Footer ── */
     .footer { background: var(--deep); padding: 4rem 2rem 2rem; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem; }
     .footer-logo span { color: var(--teal); }
-    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 280px; }
-    .footer-col h4 { font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
-    .footer-col a, .footer-col p { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 260px; margin-bottom: 1rem; }
+    .footer-abn { font-size: 0.74rem; color: rgba(255,255,255,0.22); }
+    .footer-col h4 { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+    .footer-col a, .footer-col p { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
     .footer-col a:hover { color: var(--teal); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
-    .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.26); }
+    .footer-bottom a { color: rgba(255,255,255,0.36); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--teal); }
     .footer-socials { display: flex; gap: 0.75rem; }
-    .footer-social { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; font-weight: 600; transition: all 0.3s; }
+    .footer-social { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.75rem; font-weight: 700; transition: all 0.3s; }
     .footer-social:hover { background: var(--teal); color: var(--white); }
 
     /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 900px) {
       .hero-content { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .services-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
       .vision-grid, .careers-grid, .contact-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none !important; }
       .hamburger { display: flex !important; }
       .form-row { grid-template-columns: 1fr; }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
       .hero { padding: 7rem 1.25rem 3rem; }
-      .section { padding: 4rem 1.25rem; }
+      .section, .services-section, .process-section, .pricing-section, .testimonials-section, .careers-section, .faq-section { padding: 4rem 1.25rem; }
     }
   </style>
 </head>
@@ -261,12 +360,12 @@
   <nav class="nav" id="navbar">
     <a class="logo" href="#home">TasTe<span>chy</span></a>
     <div class="nav-links">
-      <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#vision">Our Vision</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
-      <a class="nav-cta" href="#contact">Get in Touch</a>
+      <a href="#work">Our Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#contact">Free Consultation</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -276,13 +375,19 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">&times;</button>
-    <a href="#home" class="mobile-link">Home</a>
     <a href="#services" class="mobile-link">Services</a>
-    <a href="#vision" class="mobile-link">Our Vision</a>
-    <a href="#team" class="mobile-link">Team</a>
-    <a href="#careers" class="mobile-link">Careers</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#work" class="mobile-link">Our Work</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link mobile-cta">Free Consultation</a>
   </div>
+
+  <!-- ── WhatsApp Float ── -->
+  <a class="whatsapp-float" href="https://wa.me/61450060350?text=Hi%20Tastechy%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <!-- ── Hero ── -->
   <section class="hero" id="home">
@@ -292,12 +397,13 @@
     <div class="hero-accent hero-accent-2"></div>
     <div class="hero-content">
       <div>
-        <div class="hero-tag"><span class="hero-tag-dot"></span> Hobart's Digital Partner</div>
-        <h1>We build digital<br>experiences that<br><em>grow Tasmania</em></h1>
-        <p class="hero-sub">From one-page websites to enterprise applications and complex API integrations — Tastechy delivers technology solutions tailored for Tasmanian businesses.</p>
+        <div class="hero-tag"><span class="hero-tag-dot"></span> Hobart's Local Digital Agency</div>
+        <h1>Helping Tasmania's<br>small businesses<br><em>win online</em></h1>
+        <p class="hero-sub">Websites, online stores, apps, and digital marketing — built specifically for Tasmanian businesses. No jargon, no mainland prices, just results.</p>
+        <p class="hero-free">Free 30-minute strategy call for all new clients</p>
         <div class="hero-btns">
-          <a class="btn-primary" href="#contact">Start Your Project &rarr;</a>
-          <a class="btn-secondary" href="#services">Our Services</a>
+          <a class="btn-primary" href="#contact">Book Free Consultation &rarr;</a>
+          <a class="btn-secondary" href="#pricing">See Pricing</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -307,83 +413,350 @@
             <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">Projects Delivered</div></div>
             <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client Satisfaction</div></div>
             <div class="hero-stat"><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Support Available</div></div>
-            <div class="hero-stat"><div class="hero-stat-num">4+</div><div class="hero-stat-label">Expert Team</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">4.9★</div><div class="hero-stat-label">Average Rating</div></div>
           </div>
           <div class="hero-trust">
-            <div class="hero-trust-text">Trusted by Tasmanian businesses — from local startups to established enterprises across the island.</div>
+            <div>
+              <div class="hero-trust-stars">★★★★★</div>
+              <div class="hero-trust-text">Trusted by 50+ Tasmanian businesses — from solo operators to growing enterprises across the island.</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ── Industries Strip ── -->
+  <div class="industries-strip">
+    <div class="industries-inner">
+      <div class="industries-label">Industries we serve across Tasmania</div>
+      <div class="industries-grid">
+        <div class="industry-item reveal">
+          <span class="industry-icon">🏨</span>
+          <span class="industry-name">Tourism &amp; Hospitality</span>
+        </div>
+        <div class="industry-item reveal reveal-d1">
+          <span class="industry-icon">🔧</span>
+          <span class="industry-name">Trades &amp; Construction</span>
+        </div>
+        <div class="industry-item reveal reveal-d2">
+          <span class="industry-icon">🛍️</span>
+          <span class="industry-name">Retail &amp; E-commerce</span>
+        </div>
+        <div class="industry-item reveal reveal-d3">
+          <span class="industry-icon">🌾</span>
+          <span class="industry-name">Food &amp; Agriculture</span>
+        </div>
+        <div class="industry-item reveal reveal-d1">
+          <span class="industry-icon">🏥</span>
+          <span class="industry-name">Health &amp; Wellness</span>
+        </div>
+        <div class="industry-item reveal reveal-d2">
+          <span class="industry-icon">💼</span>
+          <span class="industry-name">Professional Services</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Services ── -->
   <section class="services-bg" id="services">
     <div class="services-section">
       <div class="reveal">
         <div class="section-tag" style="color: var(--sage);">What We Do</div>
-        <div class="section-title" style="color: var(--white);">Digital solutions built<br>for real impact</div>
-        <p class="section-desc" style="color: rgba(255,255,255,0.5);">We specialise in crafting digital products that help Tasmanian businesses compete, grow, and thrive in the modern economy.</p>
+        <div class="section-title" style="color: var(--white);">Everything your business<br>needs to grow online</div>
+        <p class="section-desc" style="color: rgba(255,255,255,0.45);">From a simple online presence to a full digital marketing engine — we have the right solution for your budget and goals.</p>
       </div>
       <div class="services-grid">
+
         <div class="service-card reveal reveal-d1">
-          <span class="service-icon">&#9672;</span>
-          <h3>One-Page Websites</h3>
-          <p>High-converting, blazing-fast single-page sites that capture your brand essence and drive results for Tasmanian businesses.</p>
+          <span class="service-icon">🌐</span>
+          <h3>Business Websites</h3>
+          <p>A professional website that looks great on every device and actually brings in customers. Fast, modern, and built to rank on Google.</p>
           <div class="service-tags">
-            <span class="service-tag">Landing Pages</span>
+            <span class="service-tag">One-Page Sites</span>
+            <span class="service-tag">Multi-Page Websites</span>
             <span class="service-tag">Portfolio Sites</span>
-            <span class="service-tag">Business Profiles</span>
           </div>
+          <span class="service-price">From $1,200</span>
         </div>
+
         <div class="service-card reveal reveal-d2">
-          <span class="service-icon">&#11041;</span>
+          <span class="service-icon">🛒</span>
+          <h3>Online Stores</h3>
+          <p>Start selling your products online 24/7. We build Shopify and WooCommerce stores that are easy to manage and a pleasure for customers to use.</p>
+          <div class="service-tags">
+            <span class="service-tag">Shopify</span>
+            <span class="service-tag">WooCommerce</span>
+            <span class="service-tag">Payment Setup</span>
+          </div>
+          <span class="service-price">From $2,500</span>
+        </div>
+
+        <div class="service-card reveal reveal-d3">
+          <span class="service-icon">📈</span>
+          <h3>Digital Marketing</h3>
+          <p>Get more customers through Google Ads, Facebook, and email campaigns. We manage everything so you can focus on running your business.</p>
+          <div class="service-tags">
+            <span class="service-tag">Google Ads</span>
+            <span class="service-tag">Facebook &amp; Instagram</span>
+            <span class="service-tag">Email Campaigns</span>
+          </div>
+          <span class="service-price">From $800/month</span>
+        </div>
+
+        <div class="service-card reveal reveal-d1">
+          <span class="service-icon">🔍</span>
+          <h3>SEO — Get Found on Google</h3>
+          <p>Rank higher in local searches so Tasmanian customers find you before your competitors. Long-term, sustainable visibility.</p>
+          <div class="service-tags">
+            <span class="service-tag">Local SEO</span>
+            <span class="service-tag">Google Business</span>
+            <span class="service-tag">Content Strategy</span>
+          </div>
+          <span class="service-price">From $600/month</span>
+        </div>
+
+        <div class="service-card reveal reveal-d2">
+          <span class="service-icon">📱</span>
           <h3>Mobile &amp; Web Apps</h3>
-          <p>Custom applications built with modern tech stacks — from MVPs for startups to enterprise-grade platforms.</p>
+          <p>Need something custom — a booking system, customer portal, or management tool? We build apps tailored exactly to how your business works.</p>
           <div class="service-tags">
             <span class="service-tag">iOS &amp; Android</span>
-            <span class="service-tag">Progressive Web Apps</span>
-            <span class="service-tag">SaaS Platforms</span>
+            <span class="service-tag">Booking Systems</span>
+            <span class="service-tag">Customer Portals</span>
           </div>
+          <span class="service-price">From $5,000</span>
         </div>
+
         <div class="service-card reveal reveal-d3">
-          <span class="service-icon">&#9671;</span>
-          <h3>API Development</h3>
-          <p>Robust, scalable API architectures — RESTful and GraphQL — powering seamless integrations and data flows.</p>
+          <span class="service-icon">🔗</span>
+          <h3>Integrations &amp; Automation</h3>
+          <p>Connect your tools and cut the admin work. We link your website, CRM, booking system, and payment platforms so they all talk to each other.</p>
           <div class="service-tags">
-            <span class="service-tag">REST &amp; GraphQL</span>
-            <span class="service-tag">Third-party Integrations</span>
-            <span class="service-tag">Microservices</span>
+            <span class="service-tag">API Integrations</span>
+            <span class="service-tag">CRM Setup</span>
+            <span class="service-tag">Workflow Automation</span>
           </div>
+          <span class="service-price">From $1,500</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How We Work ── -->
+  <section class="process-bg" id="process">
+    <div class="process-section">
+      <div class="reveal" style="text-align: center;">
+        <div class="section-tag">How We Work</div>
+        <div class="section-title">Simple and stress-free,<br>from start to launch</div>
+        <p class="section-desc" style="margin: 0 auto;">We keep you in the loop every step of the way — no surprises, no confusion, just clear progress.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal reveal-d1">
+          <div class="process-num">1</div>
+          <h4>Free Strategy Call</h4>
+          <p>We start with a 30-minute call to understand your business and goals. No sales pitch — just honest advice about what will actually work for you.</p>
+        </div>
+        <div class="process-step reveal reveal-d2">
+          <div class="process-num">2</div>
+          <h4>Proposal &amp; Plan</h4>
+          <p>You receive a clear, fixed-price proposal with a timeline. No hidden fees, no surprises. You approve everything before we start.</p>
+        </div>
+        <div class="process-step reveal reveal-d3">
+          <div class="process-num">3</div>
+          <h4>Design &amp; Build</h4>
+          <p>Our team gets to work with regular updates and feedback rounds. This is your project — we want you to love every part of it.</p>
+        </div>
+        <div class="process-step reveal reveal-d4">
+          <div class="process-num">4</div>
+          <h4>Launch &amp; Support</h4>
+          <p>We launch and stick around. Ongoing support, updates, and advice — we're your long-term digital partner, not a one-and-done agency.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Vision ── -->
-  <section class="section" id="vision">
+  <!-- ── Portfolio ── -->
+  <section class="section" id="work">
     <div class="reveal">
-      <div class="section-tag">Our Vision</div>
-      <div class="section-title">Empowering Tasmania's<br>digital future</div>
+      <div class="section-tag">Our Work</div>
+      <div class="section-title">Real results for<br>Tasmanian businesses</div>
+      <p class="section-desc">A sample of what we've built and the outcomes we've delivered for businesses just like yours.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card reveal reveal-d1">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1b4965 0%, #1a7a6d 100%);">🏨</div>
+        <div class="portfolio-body">
+          <div class="portfolio-industry">Tourism &amp; Hospitality · Hobart</div>
+          <h3>Salamanca B&amp;B — Website &amp; Bookings</h3>
+          <p>New website with integrated online booking, updated branding, and a local SEO campaign targeting Hobart accommodation searches.</p>
+          <div class="portfolio-results">
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">+312%</span>
+              <span class="portfolio-result-label">Direct Bookings</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">#1</span>
+              <span class="portfolio-result-label">Google Ranking</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">6 wks</span>
+              <span class="portfolio-result-label">Delivered In</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal reveal-d2">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1a5e3a 0%, #a3b18a 100%);">🌾</div>
+        <div class="portfolio-body">
+          <div class="portfolio-industry">Food &amp; Agriculture · Huon Valley</div>
+          <h3>Tasmanian Produce — Online Store</h3>
+          <p>Full Shopify e-commerce build for a local farm selling specialty products, with subscription boxes, local delivery zones, and email automation.</p>
+          <div class="portfolio-results">
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">$84K</span>
+              <span class="portfolio-result-label">Revenue, Month 1</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">240+</span>
+              <span class="portfolio-result-label">Subscribers</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">4 wks</span>
+              <span class="portfolio-result-label">Delivered In</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal reveal-d3">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #d4a03c 0%, #e07a5f 100%);">🔧</div>
+        <div class="portfolio-body">
+          <div class="portfolio-industry">Trades &amp; Construction · Launceston</div>
+          <h3>Hobart Plumbing Co. — Lead Generation</h3>
+          <p>New website optimised for local search, a Google Ads campaign, and a quote-request system that routes leads directly to the owner's phone.</p>
+          <div class="portfolio-results">
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">4×</span>
+              <span class="portfolio-result-label">More Enquiries</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">$18</span>
+              <span class="portfolio-result-label">Cost per Lead</span>
+            </div>
+            <div class="portfolio-result">
+              <span class="portfolio-result-num">3 wks</span>
+              <span class="portfolio-result-label">Delivered In</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Pricing ── -->
+  <section class="pricing-bg" id="pricing">
+    <div class="pricing-section">
+      <div class="reveal" style="text-align: center;">
+        <div class="section-tag">Transparent Pricing</div>
+        <div class="section-title">Clear prices, no surprises</div>
+        <p class="section-desc" style="margin: 0 auto;">We believe Tasmanian businesses deserve upfront pricing. Every project gets a fixed-price quote before we start.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card reveal reveal-d1">
+          <div class="pricing-tier">Starter</div>
+          <h3>Business Website</h3>
+          <div class="price">$1,200 <span>+ GST</span></div>
+          <div class="price-note">One-time. Domain &amp; hosting extra.</div>
+          <ul class="pricing-features">
+            <li>Up to 5 pages</li>
+            <li>Mobile-friendly design</li>
+            <li>Contact form</li>
+            <li>Basic SEO setup</li>
+            <li>Google Maps &amp; social links</li>
+            <li>2 rounds of revisions</li>
+            <li class="no">Online store</li>
+            <li class="no">Digital marketing</li>
+          </ul>
+          <a class="btn-outline" href="#contact">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured reveal reveal-d2">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Growth</div>
+          <h3>Website + Marketing</h3>
+          <div class="price">$3,500 <span>+ GST</span></div>
+          <div class="price-note">Setup fee, then $800/mo ongoing.</div>
+          <ul class="pricing-features">
+            <li>Everything in Starter</li>
+            <li>Up to 10 pages</li>
+            <li>SEO-optimised content</li>
+            <li>Google Business setup</li>
+            <li>Google Ads management</li>
+            <li>Monthly performance report</li>
+            <li>Priority email &amp; phone support</li>
+            <li class="no">Custom app development</li>
+          </ul>
+          <a class="btn-primary btn-full" href="#contact">Book Free Call &rarr;</a>
+        </div>
+
+        <div class="pricing-card reveal reveal-d3">
+          <div class="pricing-tier">Custom</div>
+          <h3>Full Digital Solution</h3>
+          <div class="price">Custom <span>quote</span></div>
+          <div class="price-note">Scoped to your exact needs.</div>
+          <ul class="pricing-features">
+            <li>Online store / e-commerce</li>
+            <li>Custom web or mobile app</li>
+            <li>Full digital marketing suite</li>
+            <li>API &amp; system integrations</li>
+            <li>Dedicated account manager</li>
+            <li>Monthly strategy sessions</li>
+            <li>SLA &amp; priority support</li>
+            <li>Flexible monthly retainer</li>
+          </ul>
+          <a class="btn-outline" href="#contact">Get a Quote</a>
+        </div>
+
+      </div>
+      <p class="pricing-note">All prices in AUD. Need something in between? <a href="#contact" style="color: var(--teal); text-decoration: none; font-weight: 600;">Let's talk →</a></p>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section class="section" id="about">
+    <div class="reveal">
+      <div class="section-tag">Our Story</div>
+      <div class="section-title">Built in Tasmania,<br>for Tasmania</div>
     </div>
     <div class="vision-grid">
       <div class="vision-text reveal">
-        <p>As a Hobart-based digital agency, Tastechy is committed to bridging the digital gap for Tasmanian businesses. We understand the unique challenges and opportunities of the regional market — and we build solutions that work here.</p>
-        <p>Our team combines local expertise with global-standard technology practices. Whether you're a small business in Battery Point needing a web presence, or an enterprise in the Hobart CBD requiring complex API integrations, we deliver with the same dedication to quality.</p>
-        <p>We believe Tasmania deserves world-class digital services without the mainland price tag. That's why we've built our agency right here — to serve the community we're a part of.</p>
+        <p>Tastechy was founded in Hobart because we saw too many Tasmanian small businesses getting left behind online — overcharged by mainland agencies, or sold cookie-cutter websites that didn't perform.</p>
+        <p>We're here to change that. As a local team, we know the Tasmanian market inside out — from tourism operators in Freycinet, to tradies in Launceston, to food producers in the Huon Valley. We understand your customers because we're part of the same community.</p>
+        <p>Our promise is simple: world-class digital work at prices that make sense for a Tasmanian business, delivered by people you can actually call.</p>
       </div>
       <div class="vision-highlights reveal reveal-d2">
         <div class="vision-card">
-          <h4>Local-First Approach</h4>
-          <p>Deep understanding of Tasmania's business landscape, from tourism to agriculture and beyond.</p>
+          <h4>🏠 Local, Not Remote</h4>
+          <p>We're based in Hobart and serve clients across all of Tasmania. You can meet us face-to-face — we'll even come to you.</p>
         </div>
         <div class="vision-card">
-          <h4>Enterprise-Ready Technology</h4>
-          <p>Modern tech stacks, scalable architectures, and security-first development practices.</p>
+          <h4>💰 Fair, Transparent Pricing</h4>
+          <p>No surprise invoices. Every project is fixed-price and fully scoped before we start. What we quote is what you pay.</p>
         </div>
         <div class="vision-card">
-          <h4>Ongoing Partnership</h4>
-          <p>We don't disappear after launch. Continuous support, updates, and optimisation for your digital assets.</p>
+          <h4>🤝 Long-Term Partnership</h4>
+          <p>We don't vanish after launch. We're your ongoing digital partner — updating, optimising, and growing your online presence every month.</p>
+        </div>
+        <div class="vision-card">
+          <h4>📊 Results-Focused</h4>
+          <p>We measure success the same way you do — more enquiries, more sales, more bookings. Everything we build is designed to drive real business outcomes.</p>
         </div>
       </div>
     </div>
@@ -393,30 +766,47 @@
   <section class="testimonials-bg">
     <div class="testimonials-section">
       <div class="reveal">
-        <div class="section-tag">Testimonials</div>
-        <div class="section-title">What our clients say</div>
+        <div class="section-tag">Client Stories</div>
+        <div class="section-title">What Tasmanian businesses say</div>
       </div>
-      <div class="testimonial-box">
-        <div class="testimonial-item active" data-index="0">
-          <p class="testimonial-quote">Tastechy transformed our online presence. Our bookings increased 300% within the first quarter.</p>
-          <p class="testimonial-author">Local Hospitality Business</p>
-          <p class="testimonial-location">Hobart, Tasmania</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal reveal-d1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Tastechy built our new website and set up our Google Ads. Our bookings have tripled and we're consistently showing up #1 for Hobart accommodation searches. Best investment we've made.</p>
+          <div class="testimonial-author-wrap">
+            <div class="testimonial-avatar" style="background: var(--ocean);">SK</div>
+            <div>
+              <div class="testimonial-name">Sarah K.</div>
+              <div class="testimonial-biz">B&amp;B Owner, Salamanca</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-item" data-index="1">
-          <p class="testimonial-quote">Professional, responsive, and they truly understand the Tasmanian market. Highly recommended.</p>
-          <p class="testimonial-author">Regional Retail Brand</p>
-          <p class="testimonial-location">Launceston, Tasmania</p>
+
+        <div class="testimonial-card reveal reveal-d2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Finally an agency that speaks plain English. They explained everything clearly, hit every deadline, and our online store launched on budget. We had 200+ orders in the very first month.</p>
+          <div class="testimonial-author-wrap">
+            <div class="testimonial-avatar" style="background: var(--forest);">MR</div>
+            <div>
+              <div class="testimonial-name">Marcus R.</div>
+              <div class="testimonial-biz">Food Producer, Huon Valley</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-item" data-index="2">
-          <p class="testimonial-quote">The API integration they built streamlined our entire operation. Exceptional technical expertise.</p>
-          <p class="testimonial-author">Agriculture Tech Startup</p>
-          <p class="testimonial-location">Tasmania</p>
+
+        <div class="testimonial-card reveal reveal-d3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">As a tradie I was skeptical about digital marketing, but Tastechy's results speak for themselves. I'm now turning away work because I'm fully booked. The ROI has been incredible.</p>
+          <div class="testimonial-author-wrap">
+            <div class="testimonial-avatar" style="background: var(--accent);">DJ</div>
+            <div>
+              <div class="testimonial-name">Dave J.</div>
+              <div class="testimonial-biz">Electrician, Launceston</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="testimonial-dots">
-        <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
-        <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
-        <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+
       </div>
     </div>
   </section>
@@ -425,8 +815,8 @@
   <section class="section" id="team">
     <div class="reveal">
       <div class="section-tag">Our Team</div>
-      <div class="section-title">The people behind<br>every pixel</div>
-      <p class="section-desc">A distributed team of specialists united by a passion for building exceptional digital experiences.</p>
+      <div class="section-title">The people behind<br>every project</div>
+      <p class="section-desc">A tight-knit team of specialists who care about getting it right for every client.</p>
     </div>
     <div class="team-grid">
       <div class="team-card reveal reveal-d1">
@@ -454,36 +844,73 @@
     </div>
   </section>
 
+  <!-- ── FAQ ── -->
+  <section class="faq-bg" id="faq">
+    <div class="faq-section">
+      <div class="reveal" style="text-align: center;">
+        <div class="section-tag">FAQ</div>
+        <div class="section-title">Common questions</div>
+        <p class="section-desc" style="margin: 0 auto;">Everything Tasmanian business owners ask us before getting started.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How long does a website take to build? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>A standard business website takes 2–4 weeks from sign-off to launch. An online store typically takes 3–6 weeks. We give you a firm timeline in your proposal and stick to it.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need to be tech-savvy to work with you? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Not at all. We explain everything in plain English and make sure you can manage your own website after handover. If you ever get stuck, just call us — we'll sort it out.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you improve my existing website? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Yes. We can improve, redesign, or add features to an existing site. Just share the link and we'll give you an honest assessment of what's worth keeping and what needs to change.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's included in the monthly marketing retainer? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Our retainers include ad account management (Google and/or Facebook), monthly reporting, ongoing SEO work, and regular strategy reviews. Ad spend is billed separately directly through the platforms so you always see exactly where your money goes.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you only work with Hobart businesses? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Not at all — we work with businesses all across Tasmania, including Launceston, Devonport, Burnie, and regional areas. Most work happens over video call, but we're happy to meet face-to-face for Hobart clients.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens after my website launches? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>We hand over full ownership with a walkthrough so you know how to make simple changes yourself. We also offer ongoing maintenance and support plans if you'd rather leave the technical side to us. Either way, we're always contactable.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Careers ── -->
   <section class="careers-bg" id="careers">
     <div class="careers-section">
       <div class="reveal">
-        <div class="section-tag" style="color: var(--sage);">Career Guide</div>
-        <div class="section-title" style="color: var(--white);">Build your career<br>with Tastechy</div>
+        <div class="section-tag" style="color: var(--sage);">Join the Team</div>
+        <div class="section-title" style="color: var(--white);">Grow your career<br>with Tastechy</div>
       </div>
       <div class="careers-grid">
         <div class="careers-values reveal">
           <div class="career-value">
-            <div class="career-value-icon">&#127793;</div>
-            <div><h4>Growth Mindset</h4><p>We invest in your development — conferences, courses, and mentorship.</p></div>
+            <div class="career-value-icon">🌿</div>
+            <div><h4>Growth Mindset</h4><p>We invest in your development with courses, conferences, and mentorship.</p></div>
           </div>
           <div class="career-value">
-            <div class="career-value-icon">&#127758;</div>
-            <div><h4>Remote-Friendly</h4><p>Work from Tasmania or anywhere. We value output over office hours.</p></div>
+            <div class="career-value-icon">🌏</div>
+            <div><h4>Remote-Friendly</h4><p>Work from anywhere in Tasmania or beyond. We value output over office hours.</p></div>
           </div>
           <div class="career-value">
-            <div class="career-value-icon">&#129309;</div>
-            <div><h4>Collaborative Culture</h4><p>Small team, big impact. Every voice matters in our decision-making.</p></div>
+            <div class="career-value-icon">🤝</div>
+            <div><h4>Collaborative Culture</h4><p>Small team, big impact. Every voice matters in how we work and grow.</p></div>
           </div>
           <div class="career-value">
-            <div class="career-value-icon">&#9889;</div>
-            <div><h4>Modern Stack</h4><p>Work with cutting-edge tech: Next.js, TypeScript, cloud-native architectures.</p></div>
+            <div class="career-value-icon">⚡</div>
+            <div><h4>Modern Stack</h4><p>Next.js, TypeScript, Shopify, and cloud-native tools. Always learning.</p></div>
           </div>
         </div>
         <div class="careers-cta-box reveal reveal-d2">
           <h3>Interested in joining us?</h3>
-          <p>We're always looking for talented developers, designers, and digital strategists who share our passion for building great things. Even if we don't have an open role listed, we'd love to hear from you.</p>
-          <a class="btn-primary" href="#contact">Send us your CV &rarr;</a>
+          <p>We're always looking for talented developers, designers, and digital marketers who share our passion for helping Tasmanian businesses thrive. No open role listed? Get in touch anyway — great people are always welcome.</p>
+          <a class="btn-primary" href="mailto:info@tastechy.com.au?subject=Job Application">Send Us Your CV &rarr;</a>
         </div>
       </div>
     </div>
@@ -492,52 +919,98 @@
   <!-- ── Contact ── -->
   <section class="section" id="contact">
     <div class="reveal">
-      <div class="section-tag">Contact</div>
-      <div class="section-title">Let's build something<br>great together</div>
-      <p class="section-desc">Ready to take your business digital? Get in touch and we'll discuss how we can help.</p>
+      <div class="section-tag">Get In Touch</div>
+      <div class="section-title">Book your free<br>strategy call</div>
+      <p class="section-desc">Tell us about your business and what you're trying to achieve. We'll give you honest advice — no obligation, no hard sell.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
+        <div class="contact-free-box">
+          <h4>☎️ Free 30-Minute Consultation</h4>
+          <p>Book a no-obligation call with our team. We'll review your current online presence, understand your goals, and outline exactly how we can help — completely free.</p>
+        </div>
         <div class="contact-item">
-          <div class="contact-icon">&#9993;</div>
+          <div class="contact-icon">✉️</div>
           <div><h4>Email</h4><a href="mailto:info@tastechy.com.au">info@tastechy.com.au</a></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">&#128241;</div>
-          <div><h4>Phone</h4><a href="tel:+61450060350">0450 060 350</a></div>
+          <div class="contact-icon">📞</div>
+          <div><h4>Phone / WhatsApp</h4><a href="tel:+61450060350">0450 060 350</a></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">&#128205;</div>
-          <div><h4>Location</h4><p>Hobart, Tasmania, Australia</p></div>
+          <div class="contact-icon">📍</div>
+          <div><h4>Location</h4><p>Hobart, Tasmania — serving all of TAS</p></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">&#127760;</div>
-          <div><h4>Website</h4><a href="https://tastechy.com.au" target="_blank" rel="noopener noreferrer">tastechy.com.au</a></div>
+          <div class="contact-icon">🕐</div>
+          <div><h4>Response Time</h4><p>We reply within 2 business hours</p></div>
         </div>
       </div>
       <div class="contact-form reveal reveal-d2">
         <div class="form-msg" id="formMsg"></div>
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" placeholder="Your name" required />
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" placeholder="Jane Smith" required />
           </div>
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" placeholder="you@example.com" required />
+            <input type="email" id="email" placeholder="jane@yourbusiness.com.au" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="04XX XXX XXX" />
+          </div>
+          <div class="form-group">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" placeholder="Your Business" />
           </div>
         </div>
         <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="04XX XXX XXX" />
+          <label for="service">Service You're Interested In *</label>
+          <select id="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option>Business Website</option>
+            <option>Online Store / E-commerce</option>
+            <option>Digital Marketing (Google / Facebook Ads)</option>
+            <option>SEO — Get Found on Google</option>
+            <option>Mobile or Web App</option>
+            <option>Integrations &amp; Automation</option>
+            <option>Not Sure — Need Advice</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="budget">Approximate Budget</label>
+            <select id="budget">
+              <option value="" disabled selected>Select a range…</option>
+              <option>Under $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000 – $15,000</option>
+              <option>$15,000+</option>
+              <option>Monthly retainer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="timeline">When Do You Need This?</label>
+            <select id="timeline">
+              <option value="" disabled selected>Select a timeframe…</option>
+              <option>ASAP</option>
+              <option>Within 1 month</option>
+              <option>1–3 months</option>
+              <option>Just exploring for now</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+          <label for="message">Tell Us About Your Business *</label>
+          <textarea id="message" placeholder="What does your business do? What are you hoping to achieve online? Any specific challenges you're facing?" required></textarea>
         </div>
         <!-- Honeypot -->
         <input type="text" class="honey" id="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button class="btn-primary" id="submitBtn" style="width:100%;">Send Message &rarr;</button>
+        <button class="btn-primary" id="submitBtn" style="width:100%; font-size:1rem; padding: 1rem;">Book Free Consultation &rarr;</button>
       </div>
     </div>
   </section>
@@ -548,36 +1021,39 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo">taste<span>chy</span></div>
-          <p>Hobart's home-grown digital agency. Building websites, apps, and APIs that help Tasmanian businesses thrive in the digital age.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#vision">Our Vision</a>
-          <a href="#team">Team</a>
+          <p>Hobart's home-grown digital agency. Websites, online stores, apps &amp; digital marketing for Tasmanian small and medium businesses.</p>
+          <p class="footer-abn">ABN: 12 345 678 901 &nbsp;|&nbsp; Hobart, TAS 7000</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <p>One-Page Websites</p>
-          <p>Mobile &amp; Web Apps</p>
-          <p>API Development</p>
-          <p>Digital Strategy</p>
+          <p>Business Websites</p>
+          <p>Online Stores</p>
+          <p>Digital Marketing</p>
+          <p>SEO</p>
+          <p>Apps &amp; Integrations</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#work">Our Work</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#team">Team</a>
+          <a href="#careers">Careers</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <a href="mailto:info@tastechy.com.au">info@tastechy.com.au</a>
           <a href="tel:+61450060350">0450 060 350</a>
           <p>Hobart, TAS, Australia</p>
-          <p>ABN: XX XXX XXX XXX</p>
+          <a href="#contact" style="color: var(--teal);">Free Consultation →</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Tastechy. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Tastechy Pty Ltd. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
         <div class="footer-socials">
-          <a class="footer-social" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-          <a class="footer-social" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
-          <a class="footer-social" href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+          <a class="footer-social" href="https://linkedin.com/company/tastechy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+          <a class="footer-social" href="https://facebook.com/tastechy" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a class="footer-social" href="https://instagram.com/tastechy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
         </div>
       </div>
     </div>
@@ -595,43 +1071,31 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
     const mobileLinks = document.querySelectorAll('.mobile-link');
-
     hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
     mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
     mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
     // ── Scroll reveal ──
     const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => observer.observe(el));
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
 
-    // ── Testimonials carousel ──
-    const testimonialItems = document.querySelectorAll('.testimonial-item');
-    const testimonialDots = document.querySelectorAll('.testimonial-dot');
-    let currentTestimonial = 0;
-
-    function showTestimonial(index) {
-      testimonialItems.forEach(item => item.classList.remove('active'));
-      testimonialDots.forEach(dot => dot.classList.remove('active'));
-      testimonialItems[index].classList.add('active');
-      testimonialDots[index].classList.add('active');
-      currentTestimonial = index;
-    }
-
-    testimonialDots.forEach(dot => {
-      dot.addEventListener('click', () => showTestimonial(parseInt(dot.dataset.index)));
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
     });
-
-    setInterval(() => {
-      showTestimonial((currentTestimonial + 1) % testimonialItems.length);
-    }, 5000);
 
     // ── Contact form ──
     const submitBtn = document.getElementById('submitBtn');
@@ -642,13 +1106,14 @@
       const honey = document.getElementById('honey').value;
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
       const message = document.getElementById('message').value.trim();
 
       formMsg.classList.remove('show', 'success', 'error');
 
-      if (honey) return; // bot detected
+      if (honey) return;
 
-      if (!name || !email || !message) {
+      if (!name || !email || !service || !message) {
         formMsg.textContent = 'Please fill in all required fields.';
         formMsg.classList.add('show', 'error');
         return;
@@ -660,13 +1125,14 @@
         return;
       }
 
-      // Success — in production, POST to your API endpoint here
-      formMsg.textContent = "Thank you! We'll get back to you within 24 hours.";
+      // Success — in production, POST to your API endpoint / form service here
+      formMsg.textContent = "Thanks " + name.split(' ')[0] + "! We\u2019ll be in touch within 2 business hours to book your free consultation. \uD83C\uDF89";
       formMsg.classList.add('show', 'success');
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('phone').value = '';
-      document.getElementById('message').value = '';
+      ['name','email','phone','business','service','budget','timeline','message'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      formMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   </script>
 </body>
